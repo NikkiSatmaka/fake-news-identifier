@@ -5,12 +5,15 @@
 Useful functions to preprocess text data
 """
 
+from cgitb import enable
 import re
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 import spacy
+from spacy.lang.en.stop_words import STOP_WORDS
 
+nlp = spacy.load('en_core_web_sm')
 
 def combine_text(data, combined_col, *args):
     """
@@ -84,7 +87,7 @@ def clean_text(text):
     return text_cleaned
 
 
-def strip_stopwords(text, stopwords=set(stopwords.words('english'))):
+def strip_stopwords(text, nlp=nlp):
     """
     Strip stopwords from text for NLP
 
@@ -100,12 +103,17 @@ def strip_stopwords(text, stopwords=set(stopwords.words('english'))):
     str
         Text stripped of stopwords
     """
+    if 'spacy' not in str(type(nlp)):
+        raise ValueError('nlp only exceps spaCy object')
+
+    # enable lemmatizer pipeline only
+    nlp.select_pipes(enable='lemmatizer')
 
     # tokenize processed_text
-    tokens = word_tokenize(text)
+    doc = nlp(text)
 
     # remove stopwords
-    text_stopped = [token for token in tokens if token not in stopwords]
+    text_stopped = [token.text for token in doc if not token.is_stop]
 
     return ' '.join(text_stopped)
 
@@ -136,9 +144,9 @@ def stem_text(text, stemmer=PorterStemmer()):
     return ' '.join(text_stemmed)
 
 
-def lemmatize_text(text, lemmatizer=spacy.load('en_core_web_sm')):
+def lemmatize_text(text, nlp=nlp):
     """
-    Lemmatize text for NLP
+    Lemmatize text using spaCy
 
     Parameters
     ----------
@@ -152,12 +160,15 @@ def lemmatize_text(text, lemmatizer=spacy.load('en_core_web_sm')):
     str
         preprocessed text
     """
-    if 'spacy' not in str(type(lemmatizer)):
-        raise ValueError('lemmatizer only exceps spacy object')
+    if 'spacy' not in str(type(nlp)):
+        raise ValueError('nlp only exceps spaCy object')
 
-    doc = lemmatizer(text)
+    # enable lemmatizer pipeline only
+    nlp.select_pipes(enable='lemmatizer')
+
+    doc = nlp(text)
 
     # lemmatize text
-    text_lemmatized = [token.lemma_ for token in doc]
+    text_lemmatized = [token.lemma_ for token in doc if not token.is_stop]
 
     return ' '.join(text_lemmatized)
