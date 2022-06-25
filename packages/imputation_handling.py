@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import numpy as np
-
 """
 Useful functions to handle missing values
 """
+
+import numpy as np
+import pandas as pd
 
 
 def prepare_imputation(data, variable, *args):
@@ -72,17 +73,19 @@ def impute_na(data, variable, mean_value, median_value):
     return output_data
 
 
-def drop_title_links_only(data, target, variable):
+def drop_missing_news(data, date_col, variable, target=None):
     """
     Function to check for instances of features which contains only links in
-    the dataset and return a DataFrame with the number of instances and their
-    percentage
+    the dataset with missing dates and return a DataFrame with
+    the number of instances and their percentage
 
     Parameters:
     -----------
     data (dataframe): dataframe to be checked
     target : pandas Series or DataFrame
         Target variable name
+    date_col : str
+        Date column name
     variable : list
         List of columns to be imputed
 
@@ -92,18 +95,32 @@ def drop_title_links_only(data, target, variable):
         Number of instances in dataset
     """
 
-    if data is None or target is None or variable is None:
+    if data is None or variable is None:
         raise ValueError('data, target, and variable must be specified')
+
+    # define whether to adjust target
+    adjust_target = False
+    if target is not None:
+        adjust_target = True
+        output_target = target.copy()
 
     # prepare output dataframe
     output_data = data.copy()
-    output_target = target.copy()
+
+    # convert to datetime object and pass errors as missing
+    output_data[date_col] = pd.to_datetime(output_data[date_col], errors='coerce')
+
+    # drop rows with missing dates
+    output_data = output_data.dropna(subset=[date_col])
 
     # drop instances which contains only links for the specified features
     for col in variable:
         output_data = output_data[~output_data[col].str.contains(r'^http\S+$', regex=True)]
 
     # adjust output_target to match the features
-    output_target = output_target.drop(output_target.index.difference(output_data.index))
+    if adjust_target:
+        output_target = output_target.drop(output_target.index.difference(output_data.index))
+        return output_data, output_target
 
-    return output_data, output_target
+    else:
+        return output_data
