@@ -2,3 +2,4 @@ Dataset:
 https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
 
 Deployment:
+https://fake-news-identifier.herokuapp.com/
