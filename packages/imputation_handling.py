@@ -115,7 +115,7 @@ def drop_missing_news(data, date_col, variable, target=None):
 
     # drop instances which contains only links for the specified features
     for col in variable:
-        output_data = output_data[~output_data[col].str.contains(r'^http\S+$', regex=True)]
+        output_data = output_data[~output_data[col].str.contains(r'^https?:\S+$', regex=True)]
 
     # adjust output_target to match the features
     if adjust_target:

@@ -146,7 +146,7 @@ def check_links_only(data):
 
     # Loop through the columns
     for col in data.columns:
-        tot_missval = len(data[data[col].str.contains(r'^http\S+$', regex=True)])
+        tot_missval = len(data[data[col].str.contains(r'^https?:\S+$', regex=True)])
 
         # add the missing values to the dictionary
         missing_values['feats'].append(col)

@@ -80,8 +80,8 @@ def clean_text(text):
     text_cleaned = re.sub(r"@[A-Za-z0-9_]+", " ", text_cleaned)  # remove mention
     text_cleaned = re.sub(r"#[A-Za-z0-9_]+", " ", text_cleaned)  # remove hashtags
     text_cleaned = re.sub(r"\n", " ", text_cleaned)  # remove newline
-    text_cleaned = re.sub(r"http\S+", " ", text_cleaned)  # remove link
-    text_cleaned = re.sub(r"www\S+", " ", text_cleaned)  # remove link
+    text_cleaned = re.sub(r"https?:\S+", " ", text_cleaned)  # remove link
+    text_cleaned = re.sub(r"www\.\S+", " ", text_cleaned)  # remove link
     text_cleaned = re.sub(r"[^A-Za-z\s]", " ", text_cleaned)  # remove non-alpha characters aside from whitespace
 
     return text_cleaned
