@@ -1,154 +1,156 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=8035694&assignment_repo_type=AssignmentRepo)
-# Phase 2 - Milestones 2
+<!-- Add banner here -->
 
-_Milestones ini dibuat guna mengevaluasi pembelajaran pada Hacktiv8 Data Science Full Time Program Phase 2 khususnya pada Deep Learning._
+# Fake News Identifier
 
----
+<!-- Add buttons here -->
 
-## Topik
+<!-- Describe your project in brief -->
 
-Student dipersilakan memilih topik antara Computer Vision atau Natural Language Processing, menggunakan dataset sendiri (scraping oleh student) atau menggunakan open dataset.
+<!-- The project title should be self explanotory and try not to make it a mouthful. (Although exceptions exist- **awesome-readme-writing-guide-for-open-source-projects** - would have been a cool name)
 
-Topik Computer Vision diantaranya adalah:
-- Image Classifications
-- Object Detection
-- Face Recognition
-- Gesture Recognition-dll
+Add a cover/banner image for your README. **Why?** Because it easily **grabs people's attention** and it **looks cool**(*duh!obviously!*).
 
-Topik Natural Language Processing diantaranya adalah:
-- Machine Translation
-- Information Retrieval
-- Text Categorization
-- Text Summarization
-- Sentiment Analysis / Opinion Mining-dll
+The best dimensions for the banner is **1280x650px**. You could also use this for social preview of your repo.
 
-## Data Sources
+I personally use [**Canva**](https://www.canva.com/) for creating the banner images. All the basic stuff is **free**(*you won't need the pro version in most cases*).
 
-Student dapat memilih dataset dari salah satu repository dibawah ini. Pilihlah dataset yang paling nyaman digunakan karena tidak ada batasan untuk memilih dataset dalam mengerjakan *Milestones 2*. Konsultasikan terlebih dahulu dataset yang hendak digunakan ke buddy masing-masing student. Jika disetujui, maka silakan dikerjakan. Jika tidak disetujui, maka cari dataset yang lain dan konsultasikan lagi mengenai dataset yang baru ini.
+There are endless badges that you could use in your projects. And they do depend on the project. Some of the ones that I commonly use in every projects are given below.
 
-Popular open data repositories
+I use [**Shields IO**](https://shields.io/) for making badges. It is a simple and easy to use tool that you can use for almost all your badge cravings. -->
 
-- [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)
-- [Kaggle datasets](https://www.kaggle.com/datasets)
-- [Amazon’s AWS datasets](https://registry.opendata.aws/)
+<!-- Some badges that you could use -->
 
-Meta portals (they list open data repositories)
+<!-- ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/navendu-pottekkat/awesome-readme?include_prereleases)
+: This badge shows the version of the current release.
 
-- [Data Portals](http://dataportals.org/)
-- [OpenDataMonitor](https://opendatamonitor.eu/frontend/web/index.php?r=dashboard%2Findex)
-- [Quandl](https://www.quandl.com/)
+![GitHub last commit](https://img.shields.io/github/last-commit/navendu-pottekkat/awesome-readme)
+: I think it is self-explanatory. This gives people an idea about how the project is being maintained.
 
-Other pages listing many popular open data repositories
+![GitHub issues](https://img.shields.io/github/issues-raw/navendu-pottekkat/awesome-readme)
+: This is a dynamic badge from [**Shields IO**](https://shields.io/) that tracks issues in your project and gets updated automatically. It gives the user an idea about the issues and they can just click the badge to view the issues.
 
-- [Wikipedia’s list of Machine Learning datasets](https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research)
-- [Quora.com](https://www.quora.com/Where-can-I-find-large-datasets-open-to-the-public)
-- [The datasets subreddit](https://www.reddit.com/r/datasets)
-- Sumber lain yang kredibel.
+![GitHub pull requests](https://img.shields.io/github/issues-pr/navendu-pottekkat/awesome-readme)
+: This is also a dynamic badge that tracks pull requests. This notifies the maintainers of the project when a new pull request comes.
 
-## Assignment Instructions
+![GitHub All Releases](https://img.shields.io/github/downloads/navendu-pottekkat/awesome-readme/total): If you are not like me and your project gets a lot of downloads(*I envy you*) then you should have a badge that shows the number of downloads! This lets others know how **Awesome** your project is and is worth contributing to.
 
-*Milestones 2* dikerjakan dalam format *notebook* dengan *model deployment* (opsional) dengan beberapa *kriteria wajib* di bawah ini:
+![GitHub](https://img.shields.io/github/license/navendu-pottekkat/awesome-readme)
+: This shows what kind of open-source license your project uses. This is good idea as it lets people know how they can use your project for themselves.
 
-1. Deep Learning framework yang digunakan adalah *Tensorflow*.
+![Tweet](https://img.shields.io/twitter/url?style=flat-square&logo=twitter&url=https%3A%2F%2Fnavendu.me%2Fnsfw-filter%2Findex.html): This is not essential but it is a cool way to let others know about your project! Clicking this button automatically opens twitter and writes a tweet about your project and link to it. All the user has to do is to click tweet. Isn't that neat? -->
 
-2. Ada penggunaan library visualisasi, seperti *matplotlib*, *seaborn*, atau yang lain.
+# Demo-Preview
 
-3. Isi *notebook* harus mengikuti *outline* di bawah ini:
-   1. Perkenalan
-      > Bab pengenalan harus diisi dengan identitas, gambaran besar dataset yang digunakan, dan *objective* yang ingin dicapai.
-   
-   2. Import Libraries
-      > *Cell* pertama pada *notebook* **harus berisi dan hanya berisi** semua *library* yang digunakan dalam *project*.
-   
-   3. Data Loading
-      > Bagian ini berisi proses penyiapan data sebelum dilakukan eksplorasi data lebih lanjut. Proses Data Loading dapat berupa memberi nama baru untuk setiap kolom, mengecek ukuran dataset, dll.
-   
-   4. Exploratory Data Analysis (EDA)
-      > Bagian ini berisi explorasi data pada dataset diatas dengan menggunakan query, grouping, visualisasi sederhana, word cloud, dan lain sebagainya.
+<!-- Add a demo for your project -->
 
-   5. Data Preprocessing
-      > Bagian ini berisi proses penyiapan data untuk proses pelatihan model, seperti pembagian data menjadi train-val-test, transformasi data (normalisasi, encoding, dll.), dan proses-proses lain yang dibutuhkan.   
-   
-   6. Model Definition
-      > Bagian ini berisi cell untuk mendefinisikan model. Jelaskan alasan menggunakan suatu algoritma/model/arsitektur, hyperparameter yang dipakai, jenis penggunaan metrics yang dipakai, dan hal lain yang terkait dengan model.
+<!-- After you have written about your project, it is a good idea to have a demo/preview(**video/gif/screenshots** are good options) of your project so that people can know what to expect in your project. You could also add the demo in the previous section with the product description.
 
-   7. Model Training
-      > Cell pada bagian ini hanya berisi code untuk melatih model dan output yang dihasilkan. Lakukan beberapa kali proses training dengan hyperparameter yang berbeda untuk melihat hasil yang didapatkan. Analisis dan narasikan hasil ini pada bagian Model Evaluation.
-   
-   8. Model Evaluation
-      > Pada bagian ini, dilakukan evaluasi model yang harus menunjukkan bagaimana performa model berdasarkan metrics yang dipilih. Hal ini harus dibuktikan dengan visualisasi tren performa dan/atau tingkat kesalahan model. **Lakukan analisis terkait dengan hasil pada model dan tuliskan hasil analisisnya**.
+Here is a random GIF as a placeholder.
 
-   9. Model Saving
-      > Dengan melihat hasil evaluasi model, pilihlah model terbaik untuk disimpan. Model terbaik ini akan digunakan kembali dalam melakukan deployment di Heroku.
-   
-   10. Model Inference
-       > Model yang sudah dilatih akan dicoba pada data yang bukan termasuk ke dalam train-set ataupun test-set. Data ini harus dalam format yang asli, bukan data yang sudah di-scaled.
-   
-   11. Pengambilan Kesimpulan
-       > Pada bagian terakhir ini, **harus berisi** kesimpulan yang mencerminkan hasil yang didapat dengan *objective* yang sudah ditulis di bagian pengenalan.
+![Random GIF](https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif) -->
 
-5. *Notebook* harus diupload dalam akun GitHub masing-masing siswa untuk selanjutnya dinilai.
+# Table of contents
 
-6. Penilaian project dilakukan berdasarkan *notebook* dan *service/API* model yang sudah di-deploy (jika melakukan Model Deployment).
+<!-- After you have introduced your project, it is a good idea to add a **Table of contents** or **TOC** as **cool** people say it. This would make it easier for people to navigate through your README and find exactly what they are looking for.
 
-7. Presentasikan model yang telah dibuat pada P2W3D4AM.
+Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README. -->
 
-## Assignment Submission
+- [Sticky Customers Operation](#sticky-customers-operation)
+- [Demo-Preview](#demo-preview)
+- [Table of contents](#table-of-contents)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Development](#development)
+- [Contribute](#contribute)
+    - [Sponsor](#sponsor)
+    - [Adding new features or fixing bugs](#adding-new-features-or-fixing-bugs)
+- [License](#license)
+- [Footer](#footer)
 
-- Simpan assignment pada sesi ini dengan nama `h8dsft_Milestone2P2_<nama-student>.ipynb`, misal `h8dsft_Milestone2P2_raka_ardhi.ipynb`.
-- Push assignment yang telah dibuat ke akun Github masing-masing.
-- Jika melakukan Model Deployment ke Heroku :
-  * Push juga semua file yang berkaitan dengan deployment ke repository. Akan lebih bagus jika semua file deployment berada dalam satu folder yang sama.
-  * Buat sebuah file bernama `url.txt` yang berisi URL Dataset dan URL deployment.
+# Installation
+[(Back to top)](#table-of-contents)
 
-## Assignment Objectives
+<!-- *You might have noticed the **Back to top** button(if not, please notice, it's right there!). This is a good idea because it makes your README **easy to navigate.***
 
-*Milestones 2* ini dibuat guna mengevaluasi Pembelajaran Phase 2 :
+The first one should be how to install(how to generally use your project or set-up for editing in their machine).
 
-- Mampu memahami konsep Computer Vision/NLP.
-- Mampu mempersiapkan data untuk digunakan dalam model Computer Vision/NLP.
-- Mampu mengimplementasikan Artificial Neural Network dengan data yang ada.
-- Mampu menganalisis dan menjelaskan layer yang dibuat.
+This should give the users a concrete idea with instructions on how they can use your project repo with all the steps.
 
----
+Following this steps, **they should be able to run this in their device.**
 
-## Assignment Rubrics
+A method I use is after completing the README, I go through the instructions from scratch and check if it is working. -->
 
-### Code Review
+<!-- Here is a sample instruction:
 
-| Criteria | Meet Expectations | Points |
-| --- | --- | --- |
-| Feature Engineering | Mampu melakukan proses Feature Engineering sebelum melakukan proses modeling | 30 pts |
-| Pipelines | Mampu membangun Pipeline. **Pipeline yang dimaksud adalah Pipeline yang menggunakan library `Tensorflow`. Pipeline dapat digabungkan dengan library lain jika diperlukan**. | 40 pts |
-| Modeling | Mampu membuat model untuk menyelesaikan masalah Computer Vision atau NLP | 30 pts  |
-| Model Evaluation | Mampu melakukan Model Evaluation | 40 pts |
-| Model Improvement | Mampu melakukan Model Improvement | 40 pts |
-| Model Inference | Mencoba model yang telah dibuat dengan data baru | 20 pts |
-| Apakah Kode Berjalan Tanpa Ada Error?|Kode berjalan tanpa ada error. Seluruh kode berfungsi dan dibuat dengan benar. | 10 pts |
+To use this project, first clone the repo on your device using the command below:
 
-### Readability
+```git init```
 
-| Criteria | Meet Expectations | Points|
-| --- | --- | --- |
-| Tertata Dengan Baik | Semua baris kode terdokumentasi dengan baik dengan menggunakan Markdown untuk penjelasan kode. | 10 pts |
+```git clone https://github.com/navendu-pottekkat/nsfw-filter.git``` -->
 
-### Analysis
+# Usage
+[(Back to top)](#table-of-contents)
 
-| Criteria | Meet Expectations | Points |
-| --- | --- | --- |
-| EDA Analysis | Menarik informasi/kesimpulan dari keseluruhan eksplorasi data yang dilakukan. | 30 pts |
-| Model Analysis | Menganalisa informasi dari model yang telah dibuat. | 40 pts |
+<!-- This is optional and it is used to give the user info on how to use the project after installation. This could be added in the Installation section also. -->
 
-### Deployment
+# Development
+[(Back to top)](#table-of-contents)
 
-| Criteria | Meet Expectations | Points |
-| --- | --- | --- |
-| Model Deployment | Membuat webapps terhadap project yang telah dibuat. | 10 pts |
+<!-- This is the place where you give instructions to developers on how to modify the code.
 
----
+You could give **instructions in depth** of **how the code works** and how everything is put together.
 
-```
-Total Points : 310
+You could also give specific instructions to how they can setup their development environment.
 
-Catatan : Penilaian Milestone 2 juga dapat dipengaruhi oleh aktivitas student selama Phase 2 berlangsung, baik sesi kelas maupun sesi mentoring dengan buddy-nya masing-masing sehingga terdapat kemungkinan adanya penambahan atau pengurangan nilai diluar rubric yang telah disebutkan diatas.
-```
+Ideally, you should keep the README simple. If you need to add more complex explanations, use a wiki. Check out [this wiki](https://github.com/navendu-pottekkat/nsfw-filter/wiki) for inspiration. -->
+
+# Contribute
+[(Back to top)](#table-of-contents)
+
+<!-- This is where you can let people know how they can **contribute** to your project. Some of the ways are given below.
+
+Also this shows how you can add subsections within a section. -->
+
+### Sponsor
+[(Back to top)](#table-of-contents)
+
+<!-- Your project is gaining traction and it is being used by thousands of people(***with this README there will be even more***). Now it would be a good time to look for people or organisations to sponsor your project. This could be because you are not generating any revenue from your project and you require money for keeping the project alive.
+
+You could add how people can sponsor your project in this section. Add your patreon or GitHub sponsor link here for easy access.
+
+A good idea is to also display the sponsors with their organisation logos or badges to show them your love!(*Someday I will get a sponsor and I can show my love*) -->
+
+### Adding new features or fixing bugs
+[(Back to top)](#table-of-contents)
+
+<!-- This is to give people an idea how they can raise issues or feature requests in your projects.
+
+You could also give guidelines for submitting and issue or a pull request to your project.
+
+Personally and by standard, you should use a [issue template](https://github.com/navendu-pottekkat/nsfw-filter/blob/master/ISSUE_TEMPLATE.md) and a [pull request template](https://github.com/navendu-pottekkat/nsfw-filter/blob/master/PULL_REQ_TEMPLATE.md)(click for examples) so that when a user opens a new issue they could easily format it as per your project guidelines.
+
+You could also add contact details for people to get in touch with you regarding your project. -->
+
+# License
+[(Back to top)](#table-of-contents)
+
+<!-- Adding the license to README is a good practice so that people can easily refer to it.
+
+Make sure you have added a LICENSE file in your project folder. **Shortcut:** Click add new file in your root of your repo in GitHub > Set file name to LICENSE > GitHub shows LICENSE templates > Choose the one that best suits your project!
+
+I personally add the name of the license and provide a link to it like below. -->
+
+[GNU General Public License version 3](https://opensource.org/licenses/GPL-3.0)
+
+# Footer
+[(Back to top)](#table-of-contents)
+
+<!-- Let's also add a footer because I love footers and also you **can** use this to convey important info.
+
+Let's make it an image because by now you have realised that multimedia in images == cool(*please notice the subtle programming joke). -->
+
+Leave a star in GitHub, give a clap in Medium and share this guide if you found this helpful.
+
+<!-- Add the footer here -->
+
+<!-- ![Footer](https://github.com/navendu-pottekkat/awesome-readme/blob/master/fooooooter.png) -->
