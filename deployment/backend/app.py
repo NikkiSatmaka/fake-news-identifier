@@ -98,4 +98,4 @@ def predict():
         # return response
         return response, 400
 
-app.run(debug=True)
+# app.run(debug=True)
